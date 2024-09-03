@@ -8,7 +8,7 @@ public class Zadacha_radius {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите площадь круга");
         double s = in.nextDouble();
-        System.out.println(calcCircleRadius(s));
+        System.out.printf("Радиус - %.3f" , calcCircleRadius(s));
     }
 }
 
