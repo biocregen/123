@@ -5,6 +5,7 @@ import java.util.Locale;
 public class IsPalindrome {
     public static boolean isPalindrome(String text) {
         text = text.replaceAll("[^\\da-zA-Z]", "");
+
         text = text.toLowerCase();
         System.out.println(text);
         char[] dst=new char[text.length()];
