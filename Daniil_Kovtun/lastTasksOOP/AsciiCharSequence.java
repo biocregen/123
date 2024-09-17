@@ -1,6 +1,7 @@
 package lastTasksOOP;
+import java.lang.CharSequence;
 
-public class AsciiCharSequence implements java.lang.CharSequence{
+public class AsciiCharSequence implements CharSequence{
     private byte[] array;
     private char a;
     public AsciiCharSequence(byte[] arrayOfSymbols) {
