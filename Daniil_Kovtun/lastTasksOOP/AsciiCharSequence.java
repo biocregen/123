@@ -20,14 +20,12 @@ public class AsciiCharSequence implements CharSequence{
     }
     @Override
     public AsciiCharSequence subSequence(int start, int end) {
-        //AsciiCharSequence arrayOfBytes = new AsciiCharSequence();
-        byte[] methodArray = new byte[end - start];
-        int j = 0;
-        for (int i = start; i < end; i++) {
-            methodArray[j] = this.array[i];
-            j++;
+
+        byte[] result = new byte[end - start];
+        for (int i = 0; i < end - start; i++ ) {
+            result[i] = this.array[i + start];
         }
-        return new AsciiCharSequence(methodArray);
+        return new AsciiCharSequence(result);
     }
     @Override
     public String toString() {
@@ -36,16 +34,15 @@ public class AsciiCharSequence implements CharSequence{
             str.append(charAt(i));
         }
         return str.toString();
-        //return new String(array);
     }
 
     public static void main(String[] args) {
         byte[] example = {72, 101, 108, 108, 111, 33};
         AsciiCharSequence answer = new AsciiCharSequence(example);
-        System.out.println("Последовательность - " +   answer.toString());//Hello!
-        System.out.println("Размер её - " +  answer.length());//6
-        System.out.println("Символ под № 1 - " +  answer.charAt(1));//e
-        System.out.println("Подпоследовательность - "  +  answer.subSequence(1, 5));//ello
+        System.out.println("Последовательность - " +   answer.toString());
+        System.out.println("Размер её - " +  answer.length());
+        System.out.println("Символ под № 1 - " +  answer.charAt(1));
+        System.out.println("Подпоследовательность - "  +  answer.subSequence(1, 5));
 
     }
 }
