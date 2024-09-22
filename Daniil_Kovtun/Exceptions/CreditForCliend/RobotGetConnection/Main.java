@@ -3,27 +3,23 @@ package Exceptions.CreditForCliend.RobotGetConnection;
 public class Main {
     public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY)  {
         RobotConnection a = null;
-        try {
-            a = robotConnectionManager.getConnection();
-            a.moveRobotTo(toX, toY);
-        } catch (RobotConnectionException b){
+        for (int i = 0; i < 3; i++) {
             try {
                 a = robotConnectionManager.getConnection();
                 a.moveRobotTo(toX, toY);
-            } catch (RobotConnectionException c) {
+                break;
+            } catch (RobotConnectionException b) {
+                if (i == 2) {
+                    throw new RobotConnectionException("Connection Exception");
+                }
+            } finally {
                 try {
-                    a = robotConnectionManager.getConnection();
-                    a.moveRobotTo(toX, toY);
-                } catch (RobotConnectionException d) {
-                    throw d;
+                    if (a != null) {
+                        a.close();
+                    }
+                } catch (Throwable e) {
                 }
             }
-        } finally {
-            try {
-                if (a != null) {
-                    a.close();
-                }
-            } catch (Throwable e) {}
         }
     }
 }
