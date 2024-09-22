@@ -1,4 +1,4 @@
-package testPackage.javacore_kovtun;
+package Module1.javacore_kovtun;
 
 public class Main {
     public static void printArray(int[] numbers) {

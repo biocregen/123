@@ -1,4 +1,4 @@
-package testPackage;
+package Module1;
 import java.util.Scanner;
 public class ClassMath {
     public static boolean doubleExpression(double a, double b, double c) {

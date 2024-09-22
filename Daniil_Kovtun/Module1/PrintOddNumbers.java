@@ -1,6 +1,4 @@
-package testPackage;
-
-import java.sql.SQLOutput;
+package Module1;
 
 public class PrintOddNumbers {
     public static void printOddNumbers(int[] arr) {

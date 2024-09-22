@@ -1,4 +1,4 @@
-package testPackage;
+package Module1;
 
 public class GetArrayMiddle {
     public static void printArray(int[] numbers) {

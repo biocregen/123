@@ -1,4 +1,4 @@
-package testPackage;
+package Module1;
 import java.util.Scanner;
 public class Zadacha_radius {
     public static double calcCircleRadius(double area) {

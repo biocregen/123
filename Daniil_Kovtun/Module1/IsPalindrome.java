@@ -1,6 +1,4 @@
-package testPackage;
-
-import java.util.Locale;
+package Module1;
 
 public class IsPalindrome {
     public static boolean isPalindrome(String text) {

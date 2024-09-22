@@ -1,4 +1,4 @@
-package testPackage;
+package Module1;
 
 public class PrintArray {
     public static void printArray(int[] numbers) {

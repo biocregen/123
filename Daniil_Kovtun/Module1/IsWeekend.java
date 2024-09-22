@@ -1,4 +1,4 @@
-package testPackage;
+package Module1;
 import java.util.Scanner;
 public class IsWeekend {
     public static boolean isWeekend (String weekday) {
